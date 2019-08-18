@@ -51,7 +51,7 @@ class GradCAM:
 
         heatmaps = np.array(
             [
-                heatmap_display(cam.numpy(), image, colormap)
+                heatmap_display(cam.numpy(), image.numpy(), colormap)
                 for cam, image in zip(cams, images)
             ]
         )
