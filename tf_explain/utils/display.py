@@ -81,7 +81,7 @@ def heatmap_display(heatmap, original_image, colormap=cv2.COLORMAP_VIRIDIS):
     Returns:
         np.ndarray: Original image with heatmap applied
     """
-    map = cv2.resize(heatmap, original_image.shape[0:2])
+    map = cv2.resize(heatmap, (original_image.shape[1], original_image.shape[0]))
 
     map = (map - np.min(map)) / (map.max() - map.min())
 
